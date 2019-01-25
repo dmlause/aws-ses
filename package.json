@@ -1,0 +1,11 @@
+{
+    "name": "aws-ses",
+    "version": "1.0.0",
+    "private": true,
+    "homepage": "https://dmlause.github.io",
+    "dependencies": {
+        "aws-sdk": "^2.387.0",
+        "dotenv": "^6.2.0",
+        "express": "^4.16.4"
+    }
+}
