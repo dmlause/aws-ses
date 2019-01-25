@@ -40,10 +40,14 @@ app.get('/send-email', (req, res) => {
     const sendPromise = new aws.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
 
     // Send the Email
-    sendPromise.then((data) => {
-        res.status(200).json({status: 'Email sent successfully.'});
+    sendPromise.then(() => {
+        res.status(200).json({responseText: 'Email sent successfully.'});
     }).catch((error) => {
-        res.status(500).json({status: 'Email did not send. Error: ' + error.stack });
+        res.status(500).json(
+            {
+                responseText: 'Email did not send.',
+                error: error.stack,
+            });
     });
 });
 

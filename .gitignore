@@ -4,6 +4,12 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
+#Node Modules
 node_modules
 
+#Environment Variables
 .env
+
+#Webstorm stuff
+.idea
+.idea/workspace.xml
